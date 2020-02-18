@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 class Repository extends Component {
   constructor() {
-    
+    super();
   }
 
   render() {
     return (
-      <div>
-        <h2>Here is the repository</h2>
+      <div className="Repository">
+
       </div>
     )
   }

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <Route exact path='/' render={() => <SearchResults />} />
-      <Route exact path='/repository/:id' render={() => <Repository />} /> 
+      <Route exact path='/repository/:id' render={({ match }) => <Repository id={match.params.id} />} /> 
     </div>
   )
 }

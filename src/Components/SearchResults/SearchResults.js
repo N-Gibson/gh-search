@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './SearchResults.css';
 import { searchRepositories } from '../../apiCalls';
-import Result from '../Repositories/Repositories';
+import Repositories from '../Repositories/Repositories';
 
 class SearchResults extends Component {
   constructor() {
@@ -9,6 +9,7 @@ class SearchResults extends Component {
     this.state = {
       userInput: '',
       foundRepos: [],
+      selectRepo: {},
     }
   }
 
@@ -23,9 +24,15 @@ class SearchResults extends Component {
     }
   }
 
+  selectRepo = () => {
+    console.log('hello')
+  }
+
+  //Filtering will also happen here
+
   render() {
-    let renderFoundRepos = this.state.foundRepos.map(repo => <Result key={repo.id} data={repo} />)
-    console.log(this.state.foundRepos);
+    let renderFoundRepos = this.state.foundRepos.map(repo => <Repositories key={repo.id} data={repo} />)
+
     return (
       <div className="SearchResults">
         <input type='text' name='userInput' value={this.state.userInput} onChange={this.handleChange}></input>

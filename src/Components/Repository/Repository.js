@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Repository.css';
 
-class Repository extends Component {
-  constructor() {
-    super();
-  }
+const Repository = ({ id }) => {
+  console.log(id);
+  return (
+    <div className="Repository">
 
-  render() {
-    return (
-      <div className="Repository">
-
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Repository;

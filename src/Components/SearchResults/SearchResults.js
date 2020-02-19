@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './SearchResults.css';
 import { searchRepositories } from '../../apiCalls';
+import Result from '../Result/Result';
+import { Link } from 'react-router-dom';
 
 class SearchResults extends Component {
   constructor() {
@@ -8,7 +10,6 @@ class SearchResults extends Component {
     this.state = {
       userInput: '',
       foundRepos: [],
-      error: ''
     }
   }
 
@@ -24,11 +25,16 @@ class SearchResults extends Component {
   }
 
   render() {
-    console.log(this.state.foundRepos);
+    let renderFoundRepos;
+    if(this.state.foundRepos) {
+      renderFoundRepos = this.state.foundRepos.map(repo => <Result key={repo.id} data={repo} />)
+    }
+
     return (
       <div className="SearchResults">
         <input type='text' name='userInput' value={this.state.userInput} onChange={this.handleChange}></input>
         <button onClick={this.searchRepos}>Search</button>
+        <div>{renderFoundRepos}</div>
       </div>
     )
   }

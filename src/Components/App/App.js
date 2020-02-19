@@ -6,11 +6,10 @@ import Repository from '../Repository/Repository';
 import { connect } from 'react-redux';
 
 const App = (props) => {
-  console.log(props)
   return (
     <div className="App">
       <Route exact path="/" render={() => <UserInteractions />} />
-      <Route path="/repository/:id" render={({ match }) => <Repository id={match.params.id}/>} />
+      <Route path="/repository/:id" render={({ match }) => <Repository id={match.params.id} repos={props.repos.repoItems}/>} />
     </div>
   )
 }

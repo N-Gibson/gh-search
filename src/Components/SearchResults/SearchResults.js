@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './SearchResults.css';
 import { searchRepositories } from '../../apiCalls';
 import Result from '../Result/Result';
-import { Link } from 'react-router-dom';
 
 class SearchResults extends Component {
   constructor() {
@@ -25,10 +24,7 @@ class SearchResults extends Component {
   }
 
   render() {
-    let renderFoundRepos;
-    if(this.state.foundRepos) {
-      renderFoundRepos = this.state.foundRepos.map(repo => <Result key={repo.id} data={repo} />)
-    }
+    let renderFoundRepos = this.state.foundRepos.map(repo => <Result key={repo.id} data={repo} />)
 
     return (
       <div className="SearchResults">

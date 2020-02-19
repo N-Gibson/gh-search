@@ -1,16 +1,18 @@
 import React from 'react';
 import './Result.css';
+import { Link } from 'react-router-dom';
+import Repository from '../Repository/Repository';
 
 const Result = (props) => {
-  const { name, url, language, description } = props.data;
+  const { name, language, description, id } = props.data;
 
   return (
-    <div className="Result">
+    <Link to={`/repository/${id}`} className="Result">
       <h2>{name}</h2>
       <p>{description}</p>
-      <a href={url}/>
       <p>{language}</p>
-    </div>
+      <Repository props={props}/>
+    </Link>
   )
 }
 

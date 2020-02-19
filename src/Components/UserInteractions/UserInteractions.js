@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { searchRepositories } from '../../apiCalls'; 
-import './UserInteractions.css';
 import Repositories from '../Repositories/Repositories';
-import Repository from '../Repository/Repository';
-import { Route } from 'react-router-dom';
+import './UserInteractions.css';
 
 class UserInteractions extends Component {
   constructor() {
@@ -33,7 +31,6 @@ class UserInteractions extends Component {
 
   sortByStars = (order) => {
     let starSort;
-    console.log(this.state.foundRepos[0])
 
     if(order === 'most') {
       starSort = this.state.foundRepos.sort((a, b) => {

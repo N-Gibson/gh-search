@@ -1,5 +1,5 @@
 import React from 'react';
-import './Repositories.css';
+import './Repositories.scss';
 import { Link } from 'react-router-dom';
 
 const Result = (props) => {

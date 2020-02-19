@@ -1,5 +1,5 @@
 import React from 'react';
-import './Repository.css';
+import './Repository.scss';
 
 const Repository = (props) => {
   const { id, repos } = props;

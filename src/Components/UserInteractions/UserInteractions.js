@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { searchRepositories } from '../../apiCalls'; 
 import Repositories from '../Repositories/Repositories';
-import './UserInteractions.css';
+import './UserInteractions.scss';
 import { connect } from 'react-redux';
 import { getRepos } from '../../Actions/index';
 
@@ -56,13 +56,21 @@ class UserInteractions extends Component {
     let foundRepositories = this.state.foundRepos.map(repo => <Repositories data={repo} key={repo.id}/>)
 
     return (
-      <div className="user-interactions">
-        <input type="text" name="userInput" value={this.state.userInput} onChange={this.handleChange}></input>
-        <button onClick={this.searchRepos}>Search</button>
-        <input type="text" name="languageInput" value={this.state.languageInput} onChange={this.handleChange}></input>
-        <button onClick={this.filterByLanguage}>Search Language</button>
-        <button onClick={() => this.sortByStars('most')}>Most Stars</button>
-        <button onClick={() => this.sortByStars('least')}>Least Stars</button>
+      <div className="interactions-results">
+        <div className="user-interactions">
+          <div className="search-container">
+            <input type="text" name="userInput" placeholder="Ex. React" value={this.state.userInput} onChange={this.handleChange}></input>
+            <button className="search-buttons" onClick={this.searchRepos}>Search</button>
+          </div>
+          <div className="filter-container">
+            <div className="language-container">
+              <input type="text" name="languageInput" placeholder="Ex. JavaScript" value={this.state.languageInput} onChange={this.handleChange}></input>
+              <button className="search-buttons" onClick={this.filterByLanguage}>Search Language</button>
+            </div>
+            <button className="more-less-stars" onClick={() => this.sortByStars('most')}>Most Stars</button>
+            <button className="more-less-stars" onClick={() => this.sortByStars('least')}>Least Stars</button>
+          </div>
+        </div>
         <div>{foundRepositories}</div>
         {this.state.welcomeMessage && <p>Please search for some repositories!</p>}
       </div>

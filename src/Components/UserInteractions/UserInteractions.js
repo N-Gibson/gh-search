@@ -29,6 +29,7 @@ class UserInteractions extends Component {
       this.props.getRepos({ repoItems });
       this.setState({ foundRepos: repoItems });
     }
+    console.log(this.state.foundRepos);
   }
 
   filterByLanguage = () => {

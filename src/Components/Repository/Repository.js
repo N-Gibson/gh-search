@@ -26,6 +26,7 @@ const Repository = (props) => {
             <p><span>Description: </span>{repo.description}</p>
             <p><span>Language: </span>{repo.language}</p>
             <p><span>Stars: </span>{repo.stargazers_count}</p>
+            <a href={repo.html_url}>Visit the repo</a>
           </div>
         </div>
       }

@@ -9,8 +9,8 @@ const Result = (props) => {
     <Link to={`/repository/${id}`} id="link-to-repo">
       <div className="result">
         <h2 id="repository-name" className="repository-text">{name}</h2>
-        <p className="repository-text">Description: {description}</p>
-        <p className="repository-text">Language: {language}</p>
+        <p className="repository-text"><span>Description: </span>{description}</p>
+        <p className="repository-text"><span>Language: </span>{language}</p>
       </div>
     </Link>
   )

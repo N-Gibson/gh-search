@@ -26,4 +26,5 @@ To run the application on your local machine:
 
 ### Screenshots
 
-[screencapture-localhost-3000-2020-02-19-12_14_31.pdf](https://github.com/N-Gibson/gh-search-proxy/files/4226882/screencapture-localhost-3000-2020-02-19-12_14_31.pdf)
+![screencapture-localhost-3000-2020-02-19-12_14_31](https://user-images.githubusercontent.com/49107377/74867389-d3bab700-5311-11ea-87c1-26a781dff7d9.png)
+

@@ -3,8 +3,10 @@ import UserInteractions from '../UserInteractions/UserInteractions';
 import { Route } from 'react-router-dom';
 import './App.css';
 import Repository from '../Repository/Repository';
+import { connect } from 'react-redux';
 
-const App = () => {
+const App = (props) => {
+  console.log(props)
   return (
     <div className="App">
       <Route exact path="/" render={() => <UserInteractions />} />
@@ -13,4 +15,8 @@ const App = () => {
   )
 }
 
-export default App;
+const mapStateToProps = ({ repos }) => ({
+  repos
+});
+
+export default connect(mapStateToProps)(App);

@@ -26,5 +26,4 @@ To run the application on your local machine:
 
 ### Screenshots
 
-![screencapture-localhost-3000-2020-02-19-12_14_31](https://user-images.githubusercontent.com/49107377/74867389-d3bab700-5311-11ea-87c1-26a781dff7d9.png)
-
+![screencapture-localhost-3000-2020-02-19-12_18_17](https://user-images.githubusercontent.com/49107377/74867459-efbe5880-5311-11ea-8091-0fffa3d1450c.png)

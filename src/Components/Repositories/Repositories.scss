@@ -1,0 +1,28 @@
+.result {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 4px 4px 0 #cdcdd0, 0 3px 10px 1px #cdcdd0;
+      transform: scale(1.01);
+      #repository-name {
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+}
+
+.repository-text {
+  color: black;
+  text-decoration: none;
+}
+
+#link-to-repo {
+  text-decoration: none;
+}
+
+span {
+  font-size: 1.2em;
+}

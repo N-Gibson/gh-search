@@ -57,22 +57,25 @@ class UserInteractions extends Component {
 
     return (
       <div className="interactions-results">
-        <div className="user-interactions">
+        <header className="user-interactions">
           <div className="search-container">
             <input type="text" name="userInput" placeholder="Ex. React" value={this.state.userInput} onChange={this.handleChange}></input>
             <button className="search-buttons" onClick={this.searchRepos}>Search</button>
           </div>
+          <h1>GH-Search</h1>
           <div className="filter-container">
             <div className="language-container">
               <input type="text" name="languageInput" placeholder="Ex. JavaScript" value={this.state.languageInput} onChange={this.handleChange}></input>
               <button className="search-buttons" onClick={this.filterByLanguage}>Search Language</button>
             </div>
-            <button className="more-less-stars" onClick={() => this.sortByStars('most')}>Most Stars</button>
-            <button className="more-less-stars" onClick={() => this.sortByStars('least')}>Least Stars</button>
+            <div className="star-container">
+              <button id="more-stars" className="more-less-stars" onClick={() => this.sortByStars('most')}>Most Stars</button>
+              <button id="less-stars" className="more-less-stars" onClick={() => this.sortByStars('least')}>Least Stars</button>
+            </div>
           </div>
-        </div>
+        </header>
         <div>{foundRepositories}</div>
-        {this.state.welcomeMessage && <p>Please search for some repositories!</p>}
+        {this.state.welcomeMessage && <p id="welcome-message">Please search for some repositories!</p>}
       </div>
     )
   }

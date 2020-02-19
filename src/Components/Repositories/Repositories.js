@@ -6,10 +6,12 @@ const Result = (props) => {
   const { name, language, description, id } = props.data;
 
   return (
-    <Link to={`/repository/${id}`} className="Result">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <p>{language}</p>
+    <Link to={`/repository/${id}`} id="link-to-repo">
+      <div className="result">
+        <h2 id="repository-name" className="repository-text">{name}</h2>
+        <p className="repository-text">Description: {description}</p>
+        <p className="repository-text">Language: {language}</p>
+      </div>
     </Link>
   )
 }

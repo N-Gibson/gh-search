@@ -1,5 +1,5 @@
 import React from 'react';
-import './Result.css';
+import './Repositories.css';
 import { Link } from 'react-router-dom';
 import Repository from '../Repository/Repository';
 

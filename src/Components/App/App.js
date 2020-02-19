@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
-import SearchResults from '../SearchResults/SearchResults';
-import Repository from '../Repository/Repository';
+import React from 'react';
+import UserInteractions from '../UserInteractions/UserInteractions';
 import { Route } from 'react-router-dom';
 import './App.css';
+import Repository from '../Repository/Repository';
 
-class App extends Component {
-  constructor() {
-    super()
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <Route exact path='/' render={() => <SearchResults />} />
-        <Route exact path='/repository/:id' render={() => <Repository />} /> 
-      </div>
-    )
-  }
-};
+const App = () => {
+  return (
+    <div className="App">
+      <Route exact path="/" render={() => <UserInteractions />} />
+      <Route path="/repository/:id" render={() => <Repository />} />
+    </div>
+  )
+}
 
 export default App;

@@ -1,5 +1,5 @@
 export const searchRepositories = async (keyword) => {
-  const response = await fetch(`http://localhost:3000/repositories/${keyword}`);
+  const response = await fetch(`http://localhost:3001/repositories/${keyword}`);
   if(!response.ok) {
     throw new Error('There was an error searching repositories');
   }

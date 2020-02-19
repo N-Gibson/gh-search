@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import UserInteractions from '../UserInteractions/UserInteractions';
 import { Route } from 'react-router-dom';
 import './App.css';

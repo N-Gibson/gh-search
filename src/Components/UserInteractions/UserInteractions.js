@@ -9,9 +9,10 @@ class UserInteractions extends Component {
   constructor() {
     super();
     this.state = {
-      userInput: 'react',
+      userInput: '',
       foundRepos: [],
-      languageInput: 'JavaScript',
+      languageInput: '',
+      welcomeMessage: true,
     }
   }
 
@@ -20,6 +21,8 @@ class UserInteractions extends Component {
   }
 
   searchRepos = async () => {
+    this.setState({ welcomeMessage: false });
+
     if(this.state.userInput) {
       const repositories = await searchRepositories(this.state.userInput);
       const repoItems = repositories.items
@@ -61,6 +64,7 @@ class UserInteractions extends Component {
         <button onClick={() => this.sortByStars('most')}>Most Stars</button>
         <button onClick={() => this.sortByStars('least')}>Least Stars</button>
         <div>{foundRepositories}</div>
+        {this.state.welcomeMessage && <p>Please search for some repositories!</p>}
       </div>
     )
   }

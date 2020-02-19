@@ -20,9 +20,11 @@ To run the application on your local machine:
 
 1) Run `git clone https://github.com/N-Gibson/gh-search.git` in your terminal.
 
-2) Run `npm install` in your terminal to install dependencies.
+2) Cd into repository
 
-3) Run `npm start` in your terminal to open the app in a browser.
+3) Run `npm install` in your terminal to install dependencies.
+
+4) Run `npm start` in your terminal to open the app in a browser.
 
 ### Screenshots
 

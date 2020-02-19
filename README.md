@@ -26,6 +26,4 @@ To run the application on your local machine:
 
 ### Screenshots
 
-[code-challenge-screenshot.pdf](https://github.com/N-Gibson/gh-search-proxy/files/4226875/code-challenge-screenshot.pdf)
-
-[screencapture-localhost-3000-2020-02-19-12_14_31.pdf](https://github.com/N-Gibson/gh-search-proxy/files/4226872/screencapture-localhost-3000-2020-02-19-12_14_31.pdf)
+[screencapture-localhost-3000-2020-02-19-12_14_31.pdf](https://github.com/N-Gibson/gh-search-proxy/files/4226882/screencapture-localhost-3000-2020-02-19-12_14_31.pdf)

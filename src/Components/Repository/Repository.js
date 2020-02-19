@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './Repository.css';
 
-const Repository = () => {
+const Repository = (id) => {
+  console.log(id)
   return (
     <div className="Repository">
-      <h2>Test asdfgasdfjkhgkjhgkjugkl</h2>
+      <h2>Test</h2>
     </div>
   )
 }

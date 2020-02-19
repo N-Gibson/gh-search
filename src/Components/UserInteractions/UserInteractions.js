@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { searchRepositories } from '../../apiCalls'; 
 import Repositories from '../Repositories/Repositories';
 import './UserInteractions.css';
+import { connect } from 'react-redux';
+import { getRepos } from '../../Actions/index';
 
 class UserInteractions extends Component {
   constructor() {
@@ -20,7 +22,9 @@ class UserInteractions extends Component {
   searchRepos = async () => {
     if(this.state.userInput) {
       const repositories = await searchRepositories(this.state.userInput);
-      this.setState({ foundRepos: repositories.items });
+      const repoItems = repositories.items
+      this.props.getRepos({ repoItems });
+      this.setState({ foundRepos: repoItems });
     }
   }
 
@@ -62,4 +66,8 @@ class UserInteractions extends Component {
   }
 }
 
-export default UserInteractions;
+const mapDispatchToProps = dispatch => ({
+  getRepos: repos => dispatch(getRepos(repos)),
+});
+
+export default connect(null, mapDispatchToProps)(UserInteractions);
